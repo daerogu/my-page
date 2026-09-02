@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<!-- 같은 폴더의 style.css 파일을 이 문서에 연결 -->
+</head>
+<body>
+
+</header>
+
+<!-- main에 cards 이름표를 붙인다. 다음 단계의 CSS가 이 이름으로 카드들을 가로 배치한다.
+     제목을 header로 빼는 이유는 main이 '카드들을 담는 컨테이너' 역할을 맡기 때문이다 -->
+<main class="cards">
+
+<main>
+  <h1>구대로를 소개합니다</h1>
+
+  <button id="theme-btn">다크모드 전환</button>
+  <!-- article: 독립적으로 의미있는 '카드 하나' -->
+  <article class="card">
+    <img src="https://placehold.co/120x120" alt="구대로 프로필 사진">
+    <h2>구대로</h2>
+    <p class="role">데이터 분석</p>
+    <p>안녕하세요. <br>리오넬 메시를 좋아합니다.</p>
+    <a href="https://github.com/daerogu/my-page.git">GitHub 프로필</a>
+  </article>
+</main>
+
+
+
+<script src="script.js"></script>
+<!-- script는 body 맨 끝에! HTML을 다 읽은 뒤 실행돼야 요소를 찾을 수 있음 -->
+</body>
+</html>
