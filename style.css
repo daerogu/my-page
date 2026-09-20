@@ -1,4 +1,7 @@
-* { box-sizing: border-box; margin: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 
 :root {
   --brand: #2f6f6a;
@@ -9,70 +12,337 @@ body {
   font-family: sans-serif;
   background: var(--bg);
   color: #1a2230;
-  transition: background 0.3s, color 0.3s; /* 배경·글자색 부드럽게 전환 */
+  transition: background 0.3s, color 0.3s;
 }
 
-/* 로고와 버튼을 양끝으로 */
+
+/* =========================
+   HEADER
+   ========================= */
+
 header {
+  position: relative;
+  height: 90px;
+  padding: 0 40px;
+}
+
+/* 카드 영역과 동일한 800px 폭 */
+.header-center {
+  position: relative;
+  width: min(800px, 92%);
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* 제목 → 첫 번째 카드 쪽 */
+.header-center h1 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 36px;
+  white-space: nowrap;
+}
+
+/* 모드 버튼 → 세 번째 카드 쪽 */
+.mode-buttons {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
+  gap: 8px;
 }
 
-.cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
+
+/* =========================
+   MODE BUTTONS
+   ========================= */
+
+#theme-btn {
+  cursor: pointer;
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
 }
 
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 24px;
-  width: 240px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.2s;
-}
-.card:hover { transform: translateY(-6px); }
-.card img {
-  width: 120px;            /* 너비를 120픽셀로 고정 */
-  height: 120px;           /* 높이를 120픽셀로 고정 */
-  object-fit: cover;       /* 사진 비율이 깨지거나 눌리지 않고 상자에 맞게 자름 */
-  border-radius: 50%;      /* 동그란 원형 모양으로 만듦 */
-  object-position: top;
-}
-.card .role { color: var(--brand); font-weight: bold; margin: 8px 0; }
-
-footer { text-align: center; padding: 30px; color: #888; } /* 바닥글: 가운데 정렬 */
-
-/* 다크모드 */
-body.dark { background: #1a1a1a; color: #eee; }
-body.dark .card { background: #2b2b2b; }
-
-/* 좁은 화면: 헤더를 세로로 쌓기 */
-@media (max-width: 600px) {
-  header { flex-direction: column; gap: 12px; }
+#goat-btn {
+  cursor: pointer;
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  transition: 0.2s;
 }
 
+body.goat #goat-btn {
+  background: #f6c453;
+  color: #102542;
+  border-color: #d9a928;
+  font-weight: bold;
+}
+
+
+/* =========================
+   실습 연동 버튼
+   ========================= */
 
 .project-btn {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+
   display: block;
   width: fit-content;
-  margin-top: 12px;
   padding: 12px 20px;
+
   border-radius: 8px;
   background: #2563eb;
   color: white;
+
   text-decoration: none;
   font-weight: 600;
   transition: 0.2s;
 }
 
 .project-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-50%) translateY(-2px);
   opacity: 0.9;
+}
+
+
+/* =========================
+   CARDS
+   ========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  width: min(800px, 92%);
+  margin: 20px auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+
+  width: 240px;
+  min-height: 210px;
+
+  padding: 20px 18px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.2s;
+
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+
+  object-fit: cover;
+  object-position: top;
+
+  border-radius: 50%;
+}
+
+.card .role {
+  color: var(--brand);
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+}
+
+
+/* =========================
+   DARK MODE
+   ========================= */
+
+body.dark {
+  background: #1a1a1a;
+  color: #eee;
+}
+
+body.dark .card {
+  background: #2b2b2b;
+}
+
+
+/* =========================
+   GOAT MODE 🇦🇷
+   ========================= */
+
+body.goat {
+  background:
+    linear-gradient(
+      to bottom,
+      #75aadb 0%,
+      #75aadb 33%,
+      #ffffff 33%,
+      #ffffff 66%,
+      #75aadb 66%,
+      #75aadb 100%
+    );
+
+  background-attachment: fixed;
+  color: #102542;
+}
+
+body.goat .card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #75aadb;
+}
+
+body.goat .card .role {
+  color: #3c8dbc;
+}
+
+
+/* Messi 카드 강조 */
+
+body.goat .card:nth-child(5) {
+  border: 3px solid #f6c453;
+
+  box-shadow:
+    0 0 20px rgba(246, 196, 83, 0.65);
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================
+   GOAT MODE 이미지
+   ========================= */
+
+/* 평소에는 숨김 */
+
+.goat-left,
+.goat-right {
+  display: none;
+}
+
+
+/* 왼쪽 메시 + 월드컵 */
+
+body.goat .goat-left {
+  display: block;
+
+  position: fixed;
+
+  left: 50px;
+  top: 45%;
+
+  transform: translateY(-50%);
+
+  z-index: 9999;
+}
+
+body.goat .goat-left img {
+  width: 500px;
+  height: auto;
+  display: block;
+}
+
+
+/* 오른쪽 발롱도르 8개 */
+
+body.goat .goat-right {
+  display: grid;
+
+  position: fixed;
+
+  right: 7%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  grid-template-columns: repeat(4, 80px);
+  gap: 4px;
+}
+
+body.goat .goat-right img {
+  width: 130px;
+  height: auto;
+  display: block;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  header {
+    height: auto;
+    padding: 15px;
+  }
+
+  .header-center {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-center h1 {
+    position: static;
+    transform: none;
+
+    font-size: 28px;
+  }
+
+  .mode-buttons {
+    position: static;
+    transform: none;
+  }
+
+  .project-btn {
+    position: static;
+    transform: none;
+
+    margin: 12px auto 0;
+  }
+
+  .project-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  /* 모바일에서는 GOAT 장식 이미지 숨김 */
+  body.goat .goat-left,
+  body.goat .goat-right {
+    display: none;
+  }
 }
