@@ -1,29 +1,61 @@
-# Personal Page
+# 개인소개 페이지
+
+## 프로젝트 소개
+
+전체적인 흐름은 소개페이지 -> 방명록남기기 입니다.
 
 클라우드컴퓨팅실습 개인 과제를 위해 제작한 개인 소개 웹페이지입니다.
+HTML, CSS, JavaScript를 활용하여 개인 소개 페이지를 구현하고 Vercel을 통해 배포했습니다.
+방명록 페이지(실습)간 양방향 이동이 가능하도록 페이지를 구성하였습니다.
+
+## 프로젝트 목적
+
+클라우드컴퓨팅실습에서 학습한 HTML, CSS, JavaScript 기반의 웹페이지 구현 및 배포 과정을 직접 실습하는 것을 목표로 제작했습니다.
+또한 별도로 구현한 React Frontend 및 FastAPI Backend 프로젝트와 연결하여 하나의 웹 프로젝트 형태로 구성했습니다.
+
 
 ## 주요 기능
 
+- 3×3 카드 형태의 자기소개 페이지
 - 개인 프로필 및 자기소개
-- 관심 분야 및 수업 목표 소개
+- 전공 및 자격, 업무, MBTI, 취미, 관심 분야 및 수업 목표 소개
 - 다크모드 기능
-- Memo Frontend 페이지 이동 기능
+- GOAT 모드 기능
+  - 아르헨티나 국기 테마 배경
+  - Lionel Messi 이미지 표시
+  - Ballon d'Or 8개 이미지 표시
+  - My GOAT 카드 강조 효과
+- 화면 크기에 따른 반응형 레이아웃
+- Guestbook Frontend 페이지 이동 기능
 
 ## 사용 기술
 
 - HTML
 - CSS
 - JavaScript
+- GitHub
+- Vercel
 
-## 배포
+## 파일 구성
 
-Vercel  
+- `index.html` : 개인 소개 페이지 구성
+- `style.css` : 페이지 디자인, 다크모드, GOAT 모드 및 반응형 레이아웃
+- `script.js` : 다크모드 및 GOAT 모드 동작
+- `profile.jpg` : 프로필 이미지
+- `messi_1.png` : GOAT 모드 Messi 이미지
+- `messi_2.png` : GOAT 모드 Ballon d'Or 이미지
+
+## 배포 주소
+
+Vercel
+
 https://my-page-lake-gamma.vercel.app/
 
 ## 관련 프로젝트
 
-- Memo Frontend  
+- Guestbook Frontend  
   https://github.com/daerogu/memo-frontend
 
-- Memo Backend  
+- Guestbook Backend  
   https://github.com/daerogu/memo-backend
+
