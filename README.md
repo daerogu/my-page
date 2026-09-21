@@ -5,6 +5,17 @@ Vercel과 Render에 배포하여 하나의 웹 프로젝트로 연결했습니�
 
 사용자가 웹에서 개인 소개 페이지를 둘러본 뒤 방명록을 남기는 흐름을 기준으로 구성했습니다.
 
+> **제출 주소 3가지**
+>
+> | 제출 항목 | 주소 |
+> |---|---|
+> | GitHub 저장소 | [my-page](https://github.com/daerogu/my-page) · [memo-frontend](https://github.com/daerogu/memo-frontend) · [memo-backend](https://github.com/daerogu/memo-backend) |
+> | 자기소개 페이지 | https://my-page-lake-gamma.vercel.app/ |
+> | 방명록 페이지 | https://memo-frontend-sand.vercel.app/ |
+> | 백엔드 Swagger UI | https://memo-backend-yeu0.onrender.com/docs |
+>
+> 저장소가 3개로 분리되어 있습니다. **이 저장소(`my-page`)가 전체 구조를 설명하는 진입점입니다.**
+
 ## 전체 프로젝트 구조
 
 - **1. 개인 소개 페이지**
@@ -91,3 +102,10 @@ HTML, CSS, JavaScript를 활용하여 개인 소개 페이지를 구현하고 Ve
 | 개인 소개 페이지 | https://github.com/daerogu/my-page |
 | 방명록 Frontend | https://github.com/daerogu/memo-frontend |
 | 방명록 Backend | https://github.com/daerogu/memo-backend |
+
+## 배운 점
+
+- React Frontend, FastAPI Backend, Supabase Database가 분리된 3계층 구조를 이해했습니다.
+- Vercel과 Render에 각각 배포하고 API를 통해 서비스를 연동했습니다.
+- CORS 설정을 통해 허용된 Frontend에서 Backend API를 호출하도록 구성했습니다.
+- Supabase를 연결하여 서버가 재시작되어도 방명록 데이터가 유지되도록 구현했습니다.
