@@ -11,6 +11,7 @@ Vercel과 Render에 배포하여 하나의 웹 프로젝트로 연결했습니�
   - HTML · CSS · JavaScript
   - Vercel 배포
   - 방명록 Frontend로 이동
+
   ↓
 
 - **2. 방명록 Frontend**
@@ -18,12 +19,14 @@ Vercel과 Render에 배포하여 하나의 웹 프로젝트로 연결했습니�
   - Vercel 배포
   - 사용자 입력 및 화면 표시
   - FastAPI Backend API 호출
+
   ↓
 
 - **3. 방명록 Backend API**
   - FastAPI
   - Render 배포
   - 방명록 조회 · 등록 · 삭제 API 제공
+  
   ↓
 
 - **4. Supabase Database**
