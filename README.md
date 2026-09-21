@@ -7,16 +7,30 @@ Vercel과 Render에 배포하여 하나의 웹 프로젝트로 연결했습니�
 
 ## 전체 프로젝트 구조
 
-개인 소개 페이지
-HTML · CSS · JavaScript / Vercel
-        ↓
-방명록 Frontend
-React · Vite / Vercel
-        ↓
-방명록 Backend API
-FastAPI / Render
-        ↓
-Supabase Database
+- **1. 개인 소개 페이지**
+  - HTML · CSS · JavaScript
+  - Vercel 배포
+  - 방명록 Frontend로 이동
+
+  ↓
+
+- **2. 방명록 Frontend**
+  - React · Vite
+  - Vercel 배포
+  - 사용자 입력 및 화면 표시
+  - FastAPI Backend API 호출
+
+  ↓
+
+- **3. 방명록 Backend API**
+  - FastAPI
+  - Render 배포
+  - 방명록 조회 · 등록 · 삭제 API 제공
+
+  ↓
+
+- **4. Supabase Database**
+  - 방명록 데이터 저장 및 유지
 
 # 개인소개 페이지
 
