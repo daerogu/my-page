@@ -7,7 +7,6 @@ Vercel과 Render에 배포하여 하나의 웹 프로젝트로 연결했습니�
 
 ## 전체 프로젝트 구조
 
-```text
 개인 소개 페이지
 HTML · CSS · JavaScript / Vercel
         ↓
