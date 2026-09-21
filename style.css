@@ -94,17 +94,32 @@ body.goat #goat-btn {
   top: 50%;
   transform: translateY(-50%);
 
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   width: fit-content;
-  padding: 12px 20px;
+  padding: 10px 20px;
 
   border-radius: 8px;
   background: #2563eb;
   color: white;
 
   text-decoration: none;
-  font-weight: 600;
   transition: 0.2s;
+}
+
+.project-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.project-sub {
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.75;
 }
 
 .project-btn:hover {
