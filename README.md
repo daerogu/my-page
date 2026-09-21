@@ -11,7 +11,6 @@ Vercel과 Render에 배포하여 하나의 웹 프로젝트로 연결했습니�
   - HTML · CSS · JavaScript
   - Vercel 배포
   - 방명록 Frontend로 이동
-
   ↓
 
 - **2. 방명록 Frontend**
@@ -19,14 +18,12 @@ Vercel과 Render에 배포하여 하나의 웹 프로젝트로 연결했습니�
   - Vercel 배포
   - 사용자 입력 및 화면 표시
   - FastAPI Backend API 호출
-
   ↓
 
 - **3. 방명록 Backend API**
   - FastAPI
   - Render 배포
   - 방명록 조회 · 등록 · 삭제 API 제공
-
   ↓
 
 - **4. Supabase Database**
@@ -67,7 +64,7 @@ HTML, CSS, JavaScript를 활용하여 개인 소개 페이지를 구현하고 Ve
 - GitHub
 - Vercel
 
-## 파일 구성
+## 주요 파일 구성
 
 - `index.html` : 개인 소개 페이지 구성
 - `style.css` : 페이지 디자인, 다크모드, GOAT 모드 및 반응형 레이아웃
