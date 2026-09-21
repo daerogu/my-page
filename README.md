@@ -1,8 +1,27 @@
+# 클라우드컴퓨팅실습 개인과제
+
+개인 소개 페이지와 방명록 Frontend·Backend를 각각 분리된 저장소로 구성하고,
+Vercel과 Render에 배포하여 하나의 웹 프로젝트로 연결했습니다.
+
+사용자가 웹에서 개인 소개 페이지를 둘러본 뒤 방명록을 남기는 흐름을 기준으로 구성했습니다.
+
+## 전체 프로젝트 구조
+
+```text
+개인 소개 페이지
+HTML · CSS · JavaScript / Vercel
+        ↓
+방명록 Frontend
+React · Vite / Vercel
+        ↓
+방명록 Backend API
+FastAPI / Render
+        ↓
+Supabase Database
+
 # 개인소개 페이지
 
 ## 프로젝트 소개
-
-전체적인 흐름은 소개페이지 -> 방명록남기기 입니다.
 
 클라우드컴퓨팅실습 개인 과제를 위해 제작한 개인 소개 웹페이지입니다.
 HTML, CSS, JavaScript를 활용하여 개인 소개 페이지를 구현하고 Vercel을 통해 배포했습니다.
@@ -12,7 +31,6 @@ HTML, CSS, JavaScript를 활용하여 개인 소개 페이지를 구현하고 Ve
 
 클라우드컴퓨팅실습에서 학습한 HTML, CSS, JavaScript 기반의 웹페이지 구현 및 배포 과정을 직접 실습하는 것을 목표로 제작했습니다.
 또한 별도로 구현한 React Frontend 및 FastAPI Backend 프로젝트와 연결하여 하나의 웹 프로젝트 형태로 구성했습니다.
-
 
 ## 주요 기능
 
@@ -47,15 +65,16 @@ HTML, CSS, JavaScript를 활용하여 개인 소개 페이지를 구현하고 Ve
 
 ## 배포 주소
 
-Vercel
+| 구분 | 주소 |
+| --- | --- |
+| 개인 소개 페이지 | https://my-page-lake-gamma.vercel.app/ |
+| 방명록 Frontend | https://memo-frontend-sand.vercel.app/ |
+| 방명록 Swagger UI | https://memo-backend-yeu0.onrender.com/docs |
 
-https://my-page-lake-gamma.vercel.app/
+## GitHub 저장소
 
-## 관련 프로젝트
-
-- Guestbook Frontend  
-  https://github.com/daerogu/memo-frontend
-
-- Guestbook Backend  
-  https://github.com/daerogu/memo-backend
-
+| 프로젝트 | 저장소 |
+| --- | --- |
+| 개인 소개 페이지 | https://github.com/daerogu/my-page |
+| 방명록 Frontend | https://github.com/daerogu/memo-frontend |
+| 방명록 Backend | https://github.com/daerogu/memo-backend |
